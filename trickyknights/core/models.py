@@ -1,6 +1,8 @@
 import random
+import uuid
 from django.db import models
 from django.db.models.aggregates import Count
+from rest_framework import serializers
 
 class BaseModel(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
@@ -16,8 +18,10 @@ class PuzzleManager(models.Manager):
         random_index = random.randint(0, count - 1)
         return self.all()[random_index]
 
-
 class Puzzle(BaseModel):
+    uuid = models.UUIDField(
+        default = uuid.uuid4,
+        editable = False)
     init_fen = models.CharField(max_length=100, unique=True)
     move_played = models.CharField(max_length=10)
     best_move_san = models.CharField(max_length=10)
