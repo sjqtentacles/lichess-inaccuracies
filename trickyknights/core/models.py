@@ -26,7 +26,7 @@ class Puzzle(BaseModel):
     move_played = models.CharField(max_length=10)
     best_move_san = models.CharField(max_length=10)
     best_move_uci = models.CharField(max_length=10)
-    game_url = models.URLField()
+    game_url = models.URLField(blank=True)
 
     objects = PuzzleManager()
 
