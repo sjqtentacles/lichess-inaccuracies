@@ -58,7 +58,7 @@ name | type | default | description
    ],
    "previous" : null,
    "count" : 69,
-   "next" : "http://trickyknights.org/api/puzzles/?page=2"
+   "next" : "http://trickyknights.org/api/puzzles/?page=2" // last page value is null
 }
 
 
