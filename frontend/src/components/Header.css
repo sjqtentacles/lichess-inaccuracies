@@ -1,0 +1,27 @@
+#navbar ul {
+   margin: 0;
+   padding: 5px;
+   list-style-type: none;
+   text-align: center;
+   background-color: #DCDCDC;
+   }
+
+#navbar ul li {
+   display: inline;
+   }
+
+#navbar.logo {
+    font-style: italic;
+    font-size: 30px;
+    margin-right: 300px;
+}
+
+#navbar ul li a {
+   text-decoration: none;
+   padding: .2em 1em;
+   color: #000;
+   }
+
+#navbar ul li a:hover {
+   color: #000;
+   }
